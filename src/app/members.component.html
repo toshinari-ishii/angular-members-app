@@ -1,0 +1,18 @@
+<h2>社員一覧</h2>
+<div>
+  <input type="text" #memberName placeholder="社員名:社員番号">
+  <button (click)="add(memberName.value); memberName.value=''">追加</button><p>例)サイバー太郎:T12345</p>
+</div>
+<ul class="members">
+  <li *ngFor="let member of members"
+    (click)="onSelect(member)"
+    [class.selected]="member === selectedMember">
+    <span class="badge">{{member.id}}</span> {{member.name}}
+  </li>
+</ul>
+<div *ngIf="selectedMember">
+  <h2>
+    {{ selectedMember.name }}
+  </h2>
+  <button (click)="gotoDetail()">詳細情報</button>
+</div>

@@ -1,0 +1,227 @@
+div(ng-cloak="")
+.reria-about
+  h1 How To Page
+  h2 案件管理表
+  md-content
+    md-tabs.md-primary-about(md-center-tabs="")
+      md-tab(label="新規登録・編集")
+        md-content.md-padding
+          h3
+            a(href="http://localhost:8080/#!/mpv/work-reports") 新規登録・編集
+          h3 作成した成果物を案件管理表に新規登録・編集・検索できるページです
+            md-toolbar.md-primary.md-hue-2
+              .md-toolbar-tools
+                h2.md-flex 案件管理表画面
+            md-content(flex="", layout="row", layout-margin="")
+              h4.md-card(md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}", md-theme-watch="")
+                | <br>
+                | <br>
+                | メイン画面となります。<br>こちらから新規登録・編集・検索の画面へ遷移できます。
+                | <br>登録した成果物の一覧を表示します。<br/>
+                | 画面左上の虫眼鏡ボタンから表示する成果物を条件検索で絞る事ができます。
+                <br/>
+                | <br>各項目の右側にある矢印ボタンにて表示順を変更することが可能です。
+                | <br> <span>1</span> ID-成果物のID<br/>
+                | <br><span>2</span> 受注種別-案件またはクライアント<br/>
+                | <br><span>3</span> 案件名-案件を受注した企業<br/>
+                | <br><span>4</span> 作業種別-行う作業内容<br/>
+                | <br><span>5</span> フォーマット-データの形式<br/>
+                | <br><span>6</span> プロダクト-使用するツール<br/>
+                | <br><span>7</span> 制作日-登録する日にち<br/>
+                | <br><span>8</span> ユーザー-登録者名<br/>
+                | <br><span>9</span> 本数-登録した成果物の数<br/>
+                | <br><span>10</span> 極勝数-極AIを利用した極勝数<br/>
+                | <br><span>11</span> PSD-Photoshopデータ数<br/>
+                | <br><span>12</span> Ad数-登録した素材数<br/>
+              img.howto(src="{{ ctrl.howToPage1_1 }}", alt="", flex="70")
+            md-toolbar.md-primary.md-hue-2
+              .md-toolbar-tools
+                h2.md-flex 新規登録・編集画面
+            md-content(flex="", layout="row", layout-margin="")
+              h4(hide="", show-gt-md="")
+                | <br>
+                | <br>
+                | <br>成果物の新規登録を行う画面になります。
+                | <br>※がついている項目は入力必須となっています。
+                <br/>
+                | <br><span>1</span>受注種別-案件またはクライアントを選択します<br/>
+                | <br><span>2</span>プロダクト-使用するツールを選択します<br/>
+                | <br><span>3</span>作業種別-行う作業内容を選択します<br/>
+                | <br><span>4</span>フォーマット-データ形式を選択します<br/>
+                | <br><span>5</span>制作日-登録する日にちを選択します。<br>(デフォルトで当日になっています。)<br/>
+                | <br><span>6</span> Ad数-登録した素材数<br/>
+                | <br><span>7</span>チェックバック者-極AIの<br/>判断を確認した者を選択します。<br/>(必須項目ではありません)<br/>
+                | <br><span>8</span>コメント-コメントを残せます。<br/>(必須項目ではありません)<br/>
+                <br/>
+                | <br>上記の項目の選択が完了し<br/>保存ボタンをクリックすることで登録となります。
+              img.howto(src="{{ ctrl.howToPage1_2 }}", alt="", flex="70")
+            md-toolbar.md-primary.md-hue-2
+              .md-toolbar-tools
+                h2.md-flex 検索画面
+            md-content(flex="", layout="row", layout-margin="")
+              h4(hide="", show-gt-md="")
+                | <br>
+                | <br>
+                | 確認したい成果物の詳細を<br/>絞って表示させる事ができます。
+                | <br>
+                | <br>
+                | <br><span>1</span>制作日(開始〜終了)-制作日の範囲を指定できます。<br/>
+                | <br><span>2</span>ユーザー-名前、社員番号で検索可能です。<br/>
+                | <br><span>3</span>クライアント-クライアントを選択します。<br/>
+                | <br><span>4</span>案件-クライアント、案件で選択可能です。<br/>
+                | <br><span>5</span>業界-業界を選択します。<br/>
+                | <br><span>6</span>ID-IDを入力出来ます。<br/>
+                | <br><span>7</span>受注種別-クライアント、案件を選択します。<br/>
+                | <br><span>8</span>プロダクト-使用するツール<br/>
+                | <br><span>9</span>作業種別-作業内容を選択します。<br/>
+                | <br><span>10</span>フォーマット-データ形式を選択します。<br/>
+                <br/>
+                | <br>閉じるボタンで条件に合った成果物を確認できます。
+              img.howto(src="{{ ctrl.howToPage1_3 }}", alt="", flex="70")
+      md-tab(label="制作物ライブラリ")
+        md-content.md-padding
+          h3
+            a(href="http://localhost:8080/#!/mpv/library-nav/library-main") 制作物ライブラリ
+          h3 登録されている成果物を全て表示するページです。お気に入りやカスタム条件から絞り表示させる事も可能です。
+          md-toolbar.md-primary.md-hue-2
+            .md-toolbar-tools
+              h2.md-flex 一覧表示画面
+          md-content(flex="", layout="row", layout-margin="")
+            h4(hide="", show-gt-md="")
+              h4(hide="", show-gt-md="")
+                | <br>
+                | <br>
+                | 登録されている全ての成果物を表示しているページです。<br>
+                | 成果物にカーソルを合わせることで<br>
+                | [極みAI結果,いいねボタン,お気に入りボタン]が表示されます。
+                | <br>
+                | <br>
+                | <br><span>1</span>制作物ライブラリ-成果物を全て表示するメイン画面<br/>
+                | <br><span>2</span>☆-お気に入りのみ表示<br/>
+                | <br><span>3</span>カスタム条件-閲覧したい成果物の条件を絞って表示<br/>
+            img.howto(src="{{ ctrl.howToPage2_1 }}", alt="", flex="70")
+          md-toolbar.md-primary.md-hue-2
+            .md-toolbar-tools
+              h2.md-flex 検索画面
+          md-content(flex="", layout="row", layout-margin="")
+            h4(hide="", show-gt-md="")
+              | <br>
+              | <br>
+              | 確認したい成果物の詳細を絞って表示させる事ができます。
+              | <br>一覧表示画面左上の虫眼鏡ボタンから表示する成果物を条件検索で絞る事ができます。
+              | <br>
+              | <br>またカスタム条件画面の左上の＋ボタン同じ画面です。<br>
+              | <br><span>1</span>制作日(開始〜終了)-制作日の範囲を指定できます。<br>
+              | <br><span>2</span>ユーザー-名前、社員番号で検索可能です。<br>
+              | <br><span>3</span>クライアント-クライアントを選択します。<br>
+              | <br><span>4</span>案件-クライアント、案件で選択可能です。<br>
+              | <br><span>5</span>業界-業界を選択します。<br>
+              | <br><span>6</span>フォーマット-データの形式を選択します。<br>
+              | <br><span>7</span>ファイル名-ファイル名を打ち込みます。<br>
+              | <br><span>8</span>プロダクト-使用するツールを選択します。<br>
+              | <br><span>9</span>作業種別-作業内容を選択します。<br>
+              | <br><span>10</span>フォーマット-データ形式を選択します。<br>
+              | <br><span>11</span>ファイル種別-ファイルの種類を選択します。<br>
+              | <br><span>12</span>作業種別-作業内容を選択します。<br>
+              | <br><span>13</span>チェックバック者-極AI結果チェック者を選択します。<br>
+              <br/>
+              | <br>閉じるボタンで条件に合った成果物を確認できます。
+            img.howto(src="{{ ctrl.howToPage2_3 }}", alt="", flex="35")
+            img.howto(src="{{ ctrl.howToPage2_5 }}", alt="", flex="35")
+          md-toolbar.md-primary.md-hue-2
+            .md-toolbar-tools
+              h2.md-flex ⭐️お気に入り画面
+          md-content(flex="", layout="row", layout-margin="")
+            h4(hide="", show-gt-md="")
+              | <br>
+              | <br>
+              | 制作ライブラリページでお気に入りボタンを押した成果物のみ表示するページです。
+              <br/>
+              | お気に入り画面からもお気に入りの解除が行えます。
+              | <br>
+              | <br>
+              | <br><span>1</span>♡-いいねボタン(もう一度押すことで解除)<br>
+              | <br><span>2</span>☆-お気に入りボタン(もう一度押すことで解除)<br>
+              | ユーザー自身の成果物をお気に入りに登録することでポートフォリオへ追加されます。
+            img.howto(src="{{ ctrl.howToPage2_2 }}", alt="", flex="70")
+          md-toolbar.md-primary.md-hue-2
+            .md-toolbar-tools
+              h2.md-flex カスタム条件画面
+          md-content(flex="", layout="row", layout-margin="")
+            h4(hide="", show-gt-md="")
+              | <br>
+              | <br>
+              | 左上の＋ボタンから条件を指定することで<br>
+              | 指定した条件に当てはまる成果物のみ表示するフォルダを作成することができます。
+              | <br>
+              | <br>
+              | <br><span>1</span>編集-フォルダ名を編集できます。<br>
+              | <br><span>2</span>詳細-詳細画面,フォルダ名編集,削除を選択できます。<br>
+            img.howto(src="{{ ctrl.howToPage2_4 }}", alt="", flex="70")
+      md-tab(label="管理フォルダ")
+        md-content.md-padding
+          h3
+            a(href="http://localhost:8080/#!/mpv/explorer") 管理フォルダ
+          h3 成果物の振り分け(ストック、配信済み、NG)やダウンロードを行えるページです
+            md-toolbar.md-primary.md-hue-2
+              .md-toolbar-tools
+                h2.md-flex 案件管理表画面
+            md-content(flex="", layout="row", layout-margin="")
+              h4(hide="", show-gt-md="")
+                | <br>
+                | <br>
+                | こちらの案件管理画面はFinder,Explorerを<br>
+                | 操作する様な仕様になっておりフォルダから成果物を閲覧できます。<br>
+                | <br>
+                | 画面内に複数の成果物を表示することができ,<br>
+                | 手動で「ストック,配信済み,NG」に振り分ける事が可能です。<br>
+                | <br>
+                | またダウンロード機能が<br>
+                | 備わっておりユーザー個人のPCに保存し管理することが可能です。
+                | <br>
+                | <br>
+                | <br>
+                | <br><span>1</span> 受注種別-案件またはクライアントを入力します。<br/>
+                | <br><span>2</span> フォルダ選択-表示したい成果物をフォルダ内から選択します。<br/>
+                | <br><span>3</span> 日付-日付順に表示します。<br/>
+                | <br><span>4</span> ファイル名-A⇆Z順で表示します。<br/>
+                | <br><span>5</span> ファイル名-ファイル名で検索します。<br/>
+                | <br><span>6</span> 成果物表示画面-選択された成果物を表示します。<br/>
+                | <br><span>7</span> プレビュー-表示されている成果物をリセットします。<br/>
+                | <br><span>8</span> 全解除-選択されている成果物を解除します。<br/>
+                | <br><span>9</span> 全選択-表示されている成果物を全て選択します。<br/>
+                | <br><span>10</span> 成果物ストック-登録した初期の状態に振り分けます。<br/>
+                | <br><span>11</span>成果物配信済み-配信(採用)された状態に振り分けます。<br/>
+                | <br><span>12</span> 成果物NG-NG(不採用)の状態に振り分けます。<br/>
+                | <br><span>13</span> 素材NG-ダウンロード不可になります。<br/>
+                | <br><span>14</span> 素材OK-ダウンロード可能になります。<br/>
+                | <br><span>15</span> ダウンロード-自分のPC内に保存できます。<br/>
+
+              img.howto(src="{{ ctrl.howToPage3_1 }}", alt="", flex="70")
+
+      md-tab(label="ポートフォリオ")
+        md-content.md-padding
+          h3
+            a(href="http://localhost:8080/#!/mpv/portfolio") ポートフォリオ
+          h3 ユーザーのポートフォリオ一覧表示ページです
+            md-toolbar.md-primary.md-hue-2
+              .md-toolbar-tools
+                h2.md-flex 案件管理表画面
+            md-content(flex="", layout="row", layout-margin="")
+              h4(hide="", show-gt-md="")
+                | <br>
+                | <br>
+                | こちらのポートフォリオページは<br>
+                | 各ユーザーそれぞれの成果物を表示するページとなります。<br>
+                | <br>
+                | 自身が作成した成果物のアピールポイントになります。<br>
+                | <br>
+                | 表示される成果物は全てではなく、<br>
+                | 各ユーザーがそれぞれお気に入りに登録している<br>
+                | 成果物のみの表示となります。<br>
+                | <br>
+                | <br>
+                | <br><span>1</span> ユーザー名-投稿者名と社員番号<br/>
+                | <br><span>2</span> ポートフォリオ一覧-各ユーザーの成果物を表示します。<br>
+                | <br><span>3</span> ユーザー検索-ユーザー名にて検索できます。<br/>
+              img.howto(src="{{ ctrl.howToPage4_1 }}", alt="", flex="70")
