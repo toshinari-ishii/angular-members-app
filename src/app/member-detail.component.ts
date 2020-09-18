@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Location } from '@angular/common';
-import 'rxjs/add/operator/switchMap';
+// import { Component, OnInit } from '@angular/core';
+// import { ActivatedRoute, ParamMap } from '@angular/router';
+// import { Location } from '@angular/common';
+// import 'rxjs/add/operator/switchMap';
 
-import { Member } from './member';
-import { MemberService } from './member.service';
+// import { Member } from './member';
+// import { MemberService } from './member.service';
 
 @Component({
   selector: 'member-detail', // <member-detail [member]="selectedMember"></member-detail>
-  templateUrl: './member-detail.component.html',
+  templateUrl: './member-detail.component',
   styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent implements OnInit {
@@ -32,7 +32,7 @@ export class MemberDetailComponent implements OnInit {
     this.location.back();
   }
 
-  save(): void {
+  save():{
     this.memberService.update(this.member)
       .then(() => this.goBack());
   }
