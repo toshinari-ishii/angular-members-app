@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   constructor(private memberService: MemberService) {}
 
   ngOnInit() {
-    this.memberService.getMembers()
+    memberService.getMembers()
       .then(members => this.members = members);
   }
 }
