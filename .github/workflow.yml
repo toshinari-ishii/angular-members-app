@@ -1,4 +1,4 @@
-name: build
+name: PushCheck
 on:
   push:
     branches:
