@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
@@ -12,7 +12,7 @@ import { MemberService } from './member.service';
   styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent implements OnInit {
-  member: Member;
+  member: any;
 
   constructor(
     private memberService: MemberService,
@@ -28,7 +28,7 @@ export class MemberDetailComponent implements OnInit {
       .subscribe(member => this.member = member);
   }
 
-  goBack(): void {
+  goBack():  {
     this.location.back();
   }
 
