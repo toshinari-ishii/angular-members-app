@@ -9,5 +9,9 @@
       </div>
     </div>
   </div>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+  </div>
+  <!-- <cdk-drag-drop-sorting-example></cdk-drag-drop-sorting-example> -->
 </div>
 
