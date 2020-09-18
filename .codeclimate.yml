@@ -1,8 +1,11 @@
-plugins: 
-    eslint:
+---
+  engines:
+    tslint:
+      channel: beta
+      config: tslint.json
       enabled: true
-      extensions:
-        - .es6
-        - .js
-        - .jsx
-        - .mjs
+  exclude_paths:
+    - node_modules
+  ratings:
+    paths:
+      - "**.ts"
