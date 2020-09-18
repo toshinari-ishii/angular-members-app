@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {  } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '技術統括本部 - 社員名簿';
+  title = '技術統括本部 - 名簿';
 }
 
 // <a routerLink="/members" routerLinkActive="active">社員一覧</a>
